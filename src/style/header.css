@@ -1,0 +1,164 @@
+/* Header.css */
+.topbar {
+  background-color: #035b9b;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  font-size: 14px;
+  align-items: center;
+}
+
+.topbar .left,
+.topbar .right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+
+
+.logo {
+  height: 80px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 30px;
+  font-weight: bold;
+}
+
+.nav-menu a {
+  color: #035b9b;
+  text-decoration: none;
+}
+
+.nav-menu a:hover {
+  color: #035b9b;
+}
+
+.actions {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+
+
+.cta-button {
+  background-color: #045a9f;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+.main-header {
+  position: relative;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.main-header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeDown 0.3s ease-in-out;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hamburger {
+  display: none;
+  /* Oculto en pantallas grandes */
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #035b9b;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.llamar-mobile {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 10px 20px;
+    border-top: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    z-index: 999;
+  }
+  
+
+  .cta-button {
+    display: inline-block;
+    color: white !important;
+    text-align: center;
+  }
+/* Oculta el botón fuera del menú */
+  .llamar-desktop {
+    display: none;
+  }
+  .nav-menu.abierto {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .topbar {
+    display: flex;
+    flex-direction: row;
+    /* horizontal */
+    align-items: center;
+    /* verticalmente centrado */
+    justify-content: space-between;
+    /* separación entre grupos de elementos */
+    padding: 5px 20px;
+    background-color: #045a9f;
+    color: white;
+    font-size: 14px;
+  }
+
+
+
+  .main-header {
+    flex-wrap: wrap;
+  }
+
+  .actions {
+   display: none;
+  }
+}

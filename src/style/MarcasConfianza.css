@@ -1,0 +1,144 @@
+.marcas-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #035b9b;
+    /* Naranja */
+    padding: 2rem;
+    color: white;
+    gap: 2rem;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.texto-marcas {
+    max-width: 400px;
+    flex: 1;
+    z-index: 2;
+}
+
+.h2-proveedores {
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.texto-marcas h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.texto-marcas p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.navegacion-marcas {
+    display: flex;
+    gap: 1rem;
+}
+
+.navegacion-marcas button {
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    color: white;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.navegacion-marcas button:hover {
+    background: white;
+    color: #f28c00;
+}
+
+.slider-marcas {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding: 5rem;
+    position: relative;
+    background: #ffffff;
+    z-index: 1;
+    clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+    border-radius: 0.5rem 0 0 0.5rem;
+    min-width: 300px;
+    top: -32px;
+    left: 33px;
+
+}
+
+.logo-item img {
+    max-width: 165px;
+    height: auto;
+}
+.carousel-track {
+  display: flex;
+  gap: 0;
+}
+
+@media (max-width: 768px) {
+  .marcas-section {
+    flex-direction: column;
+    padding: 20px 15px;
+    text-align: center;
+  }
+
+  .texto-marcas {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .texto-marcas h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .texto-marcas p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .navegacion-marcas {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .navegacion-marcas button {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .slider-marcas {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .carousel-track {
+    gap: 0;
+  }
+
+  .logo-item {
+    flex: 0 0 100%;
+    padding: 20px;
+  }
+
+  .logo-item img {
+    max-width: 120px;
+    height: auto;
+    object-fit: contain;
+  }
+}

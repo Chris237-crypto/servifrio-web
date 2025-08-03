@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  scroll-behavior: smooth;
+
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.cursor-outline {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #045a9f;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: transform 0.08s ease-out;
+}
+
+
+/* Scrollbar personalizado para navegadores basados en WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  /* Fondo de la pista */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #045a9f;
+  /* Color del "pulgón" */
+  border-radius: 8px;
+  border: 2px solid #f0f0f0;
+  /* Espaciado visual alrededor */
+}
+
+/* Al pasar el mouse */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #11bbf9;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: #035b9b;
+}
+
+p {
+  margin: 20px 0 20px 0;
+  font-size: 15px;
+  line-height: 26px;
+}
