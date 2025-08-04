@@ -7,6 +7,17 @@
 /**
  * @type {import('gatsby').GatsbySSR['onRenderBody']}
  */
-exports.onRenderBody = ({ setHtmlAttributes }) => {
+
+const React = require("react")
+
+exports.onRenderBody = ({ setHtmlAttributes, setHeadComponents }) => {
   setHtmlAttributes({ lang: `en` })
+
+  setHeadComponents([
+    <link
+      key="favicon"
+      rel="icon"
+      href="/favicon.ico"
+    />
+  ])
 }
