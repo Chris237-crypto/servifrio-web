@@ -124,17 +124,24 @@ const AboutUs = () => {
             <li><FaCheckCircle className="check-icon" /> Reparación de refrigeradoras</li>
             <li><FaCheckCircle className="check-icon" /> Reparación de lavavajillas</li>
           </ul>
-
           <div className="about-bottom">
             <a
               href="https://wa.me/593988630953?text=Hola,%20quisiera%20solicitar%20una%20visita%20técnica%20para%20revisar%20mi%20electrodoméstico.%20¿Podrían%20ayudarme?"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
+              onClick={() => {
+                if (typeof window !== "undefined" && window.gtag) {
+                  window.gtag('event', 'conversion', {
+                    send_to: 'AW-11117523946/tUx5CLDyx_8aEOrnn7Up'
+                  });
+                }
+              }}
             >
               SOLICITAR VISITA TÉCNICA
             </a>
           </div>
+
         </div>
       </section>
     </>

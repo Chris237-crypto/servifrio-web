@@ -168,6 +168,13 @@ const Services = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="servicio-whatsapp-btn"
+                onClick={() => {
+                if (typeof window !== "undefined" && window.gtag) {
+                  window.gtag('event', 'conversion', {
+                    send_to: 'AW-11117523946/tUx5CLDyx_8aEOrnn7Up'
+                  });
+                }
+              }}
               >
                 <FaWhatsapp className="icono-wsp" />
                 Solicitar Visita

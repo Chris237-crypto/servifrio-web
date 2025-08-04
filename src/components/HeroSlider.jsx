@@ -73,16 +73,34 @@ const HeroSlider = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn-primary fancy-hover"
+                        onClick={() => {
+                            if (typeof window !== "undefined" && window.gtag) {
+                                window.gtag('event', 'conversion', {
+                                    send_to: 'AW-11117523946/tUx5CLDyx_8aEOrnn7Up'
+                                });
+                            }
+                        }}
                     >
                         <FaWhatsapp style={{ marginRight: "8px" }} />
                         CHAT WHATSAPP
                     </a>
 
-                    <a href="tel:0988630953" className="btn-secondary fancy-hover">
+                    <a
+                        href="tel:0988630953"
+                        className="btn-secondary fancy-hover"
+                        onClick={() => {
+                            if (typeof window !== "undefined" && window.gtag) {
+                                window.gtag('event', 'conversion', {
+                                    send_to: 'AW-11117523946/tUx5CLDyx_8aEOrnn7Up'
+                                });
+                            }
+                        }}
+                    >
                         <FaPhoneAlt style={{ marginRight: "8px" }} />
                         0988630953
                     </a>
                 </div>
+
 
             </div>
 

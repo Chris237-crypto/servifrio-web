@@ -45,6 +45,12 @@ const Contacto = () => {
           <form
             onSubmit={(e) => {
               e.preventDefault();
+              // Evento Google Ads
+              if (typeof window !== "undefined" && window.gtag) {
+                window.gtag('event', 'conversion', {
+                  send_to: 'AW-11117523946/tUx5CLDyx_8aEOrnn7Up'
+                });
+              }
               enviarPorWhatsApp();
             }}
             className="formulario-contacto"

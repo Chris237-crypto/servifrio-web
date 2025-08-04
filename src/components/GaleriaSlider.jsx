@@ -98,6 +98,13 @@ const GaleriaSlider = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="whatsapp-button"
+                  onClick={() => {
+                    if (typeof window !== "undefined" && window.gtag) {
+                      window.gtag('event', 'conversion', {
+                        send_to: 'AW-11117523946/tUx5CLDyx_8aEOrnn7Up'
+                      });
+                    }
+                  }}
                 >
                   <FaWhatsapp style={{ marginRight: "8px" }} />
                   Consultar por WhatsApp

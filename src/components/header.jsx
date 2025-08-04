@@ -60,7 +60,19 @@ const Header = () => {
           <a href="#about" onClick={() => setMenuAbierto(false)}>Sobre Nosotros</a>
           <a href="#services" onClick={() => setMenuAbierto(false)}>Servicios</a>
           <a href="#contact" onClick={() => setMenuAbierto(false)}>Contacto</a>
-          <a href="tel:0988630953" className="cta-button llamar-mobile">
+
+          <a
+            href="tel:0988630953"
+            className="cta-button llamar-mobile"
+            onClick={() => {
+              if (typeof window !== "undefined" && window.gtag) {
+                window.gtag('event', 'conversion', {
+                  send_to: 'AW-11117523946/tUx5CLDyx_8aEOrnn7Up'
+                });
+              }
+              setMenuAbierto(false); // Cierra el menú después del clic
+            }}
+          >
             <FaPhoneAlt style={{ marginRight: "8px" }} />
             Llamar
           </a>
